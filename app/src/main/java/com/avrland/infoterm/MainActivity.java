@@ -4,6 +4,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -26,8 +27,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //getSupportActionBar().setIcon(R.mipmap.icon_m);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setSubtitle("v0.1");
     }
-
     public void sync(View view) {
         if(isConnected()) {
             GraphView graph = (GraphView) findViewById(R.id.graph);
