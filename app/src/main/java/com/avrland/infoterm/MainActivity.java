@@ -1,5 +1,6 @@
 package com.avrland.infoterm;
 
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
@@ -29,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //getSupportActionBar().setIcon(R.mipmap.icon_m);
         //getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setSubtitle("v0.1");
+       // getSupportActionBar().setSubtitle("v0.1");
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(myToolbar);
     }
     public void sync(View view) {
         if(isConnected()) {
